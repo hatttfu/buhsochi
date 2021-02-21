@@ -618,6 +618,12 @@ a:hover {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 608px) {
+    .stages .container-md {
+        padding: 5rem 0;
+    }
+}
+
 .stages .button-apply {
     padding-left: 0;
 }
@@ -661,11 +667,6 @@ a:hover {
 .stage__icon-fifth img {
     left: 7px;
 }
-
-/* .stage__icon-first .vector-top {
-    top: -20px;
-    left: 115px;
-} */
 
 .stage__icon-second img {
     bottom: 3px;
@@ -853,8 +854,6 @@ a:hover {
 }
 
 .slider__item {
-    /* padding: 0 15px;
-    max-width: 200px; */
     min-height: 250px;
     display: flex;
     flex-direction: column;
@@ -1104,7 +1103,7 @@ a:hover {
         font-size: 1.4rem;
     }
     .partners {
-        min-height: 100vh;
+        min-height: 120vh;
     }
 }
 

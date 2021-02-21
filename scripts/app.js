@@ -48,6 +48,12 @@ $(document).ready(function(){
 				settings: {
 					slidesToShow:1
 				}
+			},
+			{
+				breakpoint: 388,
+				settings: {
+					slidesToShow:1
+				}
 			}
 		]
 	});
@@ -70,6 +76,12 @@ $(document).ready(function(){
 			},
 			{
 				breakpoint: 600,
+				settings: {
+					slidesToShow:1
+				}
+			},
+			{
+				breakpoint: 456,
 				settings: {
 					slidesToShow:1
 				}
@@ -101,6 +113,12 @@ $(document).ready(function(){
 			},
 			{
 				breakpoint: 653,
+				settings: {
+					slidesToShow:1
+				}
+			},
+			{
+				breakpoint: 456,
 				settings: {
 					slidesToShow:1
 				}
