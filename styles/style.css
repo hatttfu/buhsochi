@@ -1127,6 +1127,9 @@ a:hover {
     .review-slider.slick-slider {
         padding: 0 1rem !important;
     }
+    .team-slider.slick-slider {
+        padding: 0 1rem !important;
+    }
 }
 
 .footer {
