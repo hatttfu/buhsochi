@@ -118,7 +118,7 @@ $(document).ready(function(){
         adaptiveHeight: true,
 		speed: 500,
         centerMode: true,
-		variableWidth: true,
+		// variableWidth: true,
 		responsive:[
             {
 				breakpoint: 992,
@@ -148,8 +148,36 @@ $(document).ready(function(){
 	});
 });
 
+$(document).ready(function() {
+    $( ".faq__block" ).click( function() {
+        $(this).children(".arrow-icon").toggleClass('flip');
+    });
+});
+
+$(document).ready(function() {
+    $( ".arrow-icon" ).click( function() {
+        $(this).toggleClass('flip');
+    });
+});
 
 
-
+$(function(){
+	$('.minimized').click(function(event) {
+	  var i_path = 'https://placehold.it/850x1000';
+	  $('.reviews').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
+	  $('#magnify').css({
+	   left: ($(document).width() - $('#magnify').outerWidth())/2,
+		top: ($(window).height() - $('#magnify').outerHeight())/2
+	 });
+	  $('#overlay, #magnify').fadeIn('fast');
+	});
+	
+	$('body').on('click', '#close-popup, #overlay', function(event) {
+	  event.preventDefault();
+	  $('#overlay, #magnify').fadeOut('fast', function() {
+		$('#close-popup, #magnify, #overlay').remove();
+	  });
+	});
+  });
 
 

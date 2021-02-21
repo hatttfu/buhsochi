@@ -796,6 +796,8 @@ a:hover {
     box-shadow: 0px 0px 29px -3px rgba(0, 0, 0, 0.25);
     z-index: 1000;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 .button-faq {
@@ -823,6 +825,68 @@ a:hover {
 .faq__block:hover {
     background-color: #FCDE41;
 }
+
+.arrow-icon:focus {
+    transform: rotate(-180deg);
+}
+
+.flip {
+    transform: rotate(-180deg);
+}
+
+  /* увеличенная картинка */
+  #magnify {
+    display: none;
+    position: fixed;
+    max-width: 600px;
+    margin: 0 auto;
+    height: auto;
+    z-index: 999999;
+  }
+  #magnify img {
+    width: 100%;
+  }
+  /* затемняющий фон */
+  #overlay {
+    display: none;
+    background: #000;
+    transition: all 0.3s ease 0s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vw;
+    width: 100vw;
+    opacity: 0.5;
+    z-index: 999990;
+  }
+  /* кнопка закрытия */
+  #close-popup {
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #AFAFAF;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  #close-popup i {
+    width: 30px;
+    height: 30px;
+    background: url(https://codernote.ru/files/cross.png) no-repeat center center;
+    background-size: 16px 16px;
+    display: block;
+  }
+  @keyframes rota {
+   25% { transform: rotate(360deg); }
+  }
+  #close-popup:hover {
+    animation: rota 4s infinite normal;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
 
 @media(max-width: 646px) {
     .faq__block {
@@ -884,6 +948,12 @@ a:hover {
 /* Ограничивающая оболочка */
 .slick-list {
 	overflow: hidden;
+    padding: 30px 50px !important;
+}
+
+.partners.slick-list {
+	overflow: hidden;
+    padding: 30px 50px !important;
 }
 /* Лента слайдов */
 .slick-track{
@@ -919,7 +989,7 @@ a:hover {
     border: none !important;
 }
 .slick-arrow:focus {
-    border: none !important;
+    outline: none !important;
 }
 .slick-arrow.slick-prev{
 	left: 0;
@@ -938,6 +1008,10 @@ a:hover {
 }
 .slider__item img{
 	max-width: 100%;
+}
+
+.slick-slide:focus {
+    outline: none;
 }
 
 @media(max-width: 683px) {
@@ -971,12 +1045,16 @@ a:hover {
     z-index: 100000 !important;
 }
 
-.review-slider.void {
-    width: 0;
+.void {
+    display: none;;
 }
 
-.review-slider.slider__item img:hover {
-    transform: scale(1.8);
+.review-slider img {
+    cursor: pointer;
+}
+
+.review-slider img:hover {
+    transform: scale(1.2) !important;
 }
 
 .reviews__picture {
