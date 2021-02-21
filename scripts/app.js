@@ -64,6 +64,7 @@ $(document).ready(function(){
 		arrows: true,
         infinite: true,
 		slidesToShow: 4,
+		slidesToScroll: 1,
         adaptiveHeight: true,
 		speed: 500,
         centerMode: true,
@@ -81,7 +82,19 @@ $(document).ready(function(){
 				}
 			},
 			{
-				breakpoint: 456,
+				breakpoint: 466,
+				settings: {
+					slidesToShow:1
+				}
+			},
+			{
+				breakpoint: 454,
+				settings: {
+					slidesToShow:1
+				}
+			},
+			{
+				breakpoint: 452,
 				settings: {
 					slidesToShow:1
 				}
@@ -95,9 +108,11 @@ $(document).ready(function(){
 		arrows: true,
         infinite: true,
 		slidesToShow: 4,
+		slidesToScroll: 1,
         adaptiveHeight: true,
 		speed: 500,
         centerMode: true,
+		variableWidth: true,
 		responsive:[
             {
 				breakpoint: 992,
@@ -118,7 +133,7 @@ $(document).ready(function(){
 				}
 			},
 			{
-				breakpoint: 456,
+				breakpoint: 466,
 				settings: {
 					slidesToShow:1
 				}

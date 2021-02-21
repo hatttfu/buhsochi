@@ -878,7 +878,6 @@ a:hover {
 /* Ограничивающая оболочка */
 .slick-list {
 	overflow: hidden;
-    /* padding: 0 100px; */
 }
 /* Лента слайдов */
 .slick-track{
@@ -994,6 +993,26 @@ a:hover {
     font-size: 1.4rem;
     line-height: 1.8rem;
     text-align: center;
+}
+
+@media(max-width: 460px) {
+    .card {
+        width: 17rem !important;
+        min-height: 23rem
+    }
+    .card-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 460px) {
+    .review-slider.slider-item img {
+        width: auto !important;
+        min-height: 23rem
+    }
+    .review-slider.slick-slider {
+        padding: 0 1rem !important;
+    }
 }
 
 .footer {
