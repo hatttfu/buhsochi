@@ -123,29 +123,31 @@ $(document).ready(function(){
             {
 				breakpoint: 992,
 				settings: {
-					slidesToShow:3,
-					slidesToScroll: 1
+					slidesToShow:2
 				}
 			},
 			{
-				breakpoint: 900,
+				breakpoint: 600,
 				settings: {
-					slidesToShow:2,
-					slidesToScroll: 1
-				}
-			},
-			{
-				breakpoint: 653,
-				settings: {
-					slidesToShow:1,
-					slidesToScroll: 1
+					slidesToShow:1
 				}
 			},
 			{
 				breakpoint: 466,
 				settings: {
-					slidesToShow:1,
-					slidesToScroll: 1
+					slidesToShow:1
+				}
+			},
+			{
+				breakpoint: 454,
+				settings: {
+					slidesToShow:1
+				}
+			},
+			{
+				breakpoint: 452,
+				settings: {
+					slidesToShow:1
 				}
 			}
 		]
@@ -164,24 +166,37 @@ $(document).ready(function() {
     });
 });
 
+var head = $('head');
+includeScripts(head);
+$(window).resize(function(){
+	includeScripts(head);
+});
 
-$(function(){
-	$('.minimized').click(function(event) {
-	  var i_path = 'https://placehold.it/850x1000';
-	  $('.reviews').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
-	  $('#magnify').css({
-	   left: ($(document).width() - $('#magnify').outerWidth())/2,
-		top: ($(window).height() - $('#magnify').outerHeight())/2
-	 });
-	  $('#overlay, #magnify').fadeIn('fast');
-	});
+function includeScripts(head){
+
+	if ($('.max_width_1000').is(':hidden')) {
+		$(function(){
+			$('.minimized').click(function(event) {
+			var i_path = 'https://placehold.it/850x1000';
+			$('.reviews').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
+			$('#magnify').css({
+			left: ($(document).width() - $('#magnify').outerWidth())/2,
+				top: ($(window).height() - $('#magnify').outerHeight())/2
+			});
+			$('#overlay, #magnify').fadeIn('fast');
+			});
+			
+			$('body').on('click', '#close-popup, #overlay', function(event) {
+			event.preventDefault();
+			$('#overlay, #magnify').fadeOut('fast', function() {
+				$('#close-popup, #magnify, #overlay').remove();
+			});
+			});
+		});
+	}
 	
-	$('body').on('click', '#close-popup, #overlay', function(event) {
-	  event.preventDefault();
-	  $('#overlay, #magnify').fadeOut('fast', function() {
-		$('#close-popup, #magnify, #overlay').remove();
-	  });
-	});
-  });
+
+}
+
 
 
