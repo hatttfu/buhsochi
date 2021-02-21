@@ -166,15 +166,15 @@ $(document).ready(function() {
     });
 });
 
-var head = $('head');
-includeScripts(head);
-$(window).resize(function(){
-	includeScripts(head);
-});
+// var head = $('head');
+// includeScripts(head);
+// $(window).resize(function(){
+// 	includeScripts(head);
+// });
 
-function includeScripts(head){
+// function includeScripts(head){
 
-	if ($('.max_width_1000').is(':hidden')) {
+// 	if ($('.max_width_1000').is(':hidden')) {
 		$(function(){
 			$('.minimized').click(function(event) {
 			var i_path = 'https://placehold.it/850x1000';
@@ -193,10 +193,10 @@ function includeScripts(head){
 			});
 			});
 		});
-	}
+// 	}
 	
 
-}
+// }
 
 
 
