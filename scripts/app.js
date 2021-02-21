@@ -26,7 +26,7 @@ $(document).ready(function(){
         infinite: true,
 		slidesToShow: 5,
         adaptiveHeight: true,
-		autoplay: true,
+		// autoplay: true,
 		speed: 500,
 		autoplaySpeed: 800,
         centerMode: true,
@@ -45,6 +45,12 @@ $(document).ready(function(){
 			},
 			{
 				breakpoint: 650,
+				settings: {
+					slidesToShow:1
+				}
+			},
+			{
+				breakpoint: 424,
 				settings: {
 					slidesToShow:1
 				}

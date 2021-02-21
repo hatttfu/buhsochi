@@ -934,6 +934,21 @@ a:hover {
 	max-width: 100%;
 }
 
+@media(max-width: 683px) {
+    .partners {
+        height: 120vh;
+    }
+}
+
+@media(max-width: 424px) {
+    .slide__text {
+        display: none;
+    }
+    /* .partners {
+        height: 70vh;
+    } */
+}
+
 .reviews, .team {
     position: relative;
     background-color: #fff;
@@ -1120,9 +1135,6 @@ a:hover {
     .footer__rights div {
         margin-bottom: 2rem;
         font-size: 1.4rem;
-    }
-    .partners {
-        min-height: 120vh;
     }
 }
 
