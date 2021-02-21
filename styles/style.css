@@ -1004,10 +1004,6 @@ a:hover {
     right: 400px;
 }
 
-/* .max_width_1000{
-	display: none;
-} */
-
 @media(max-width: 1000px) {
 	.review-slider img {
         pointer-events: none;
@@ -1015,19 +1011,21 @@ a:hover {
 }
 
   /* увеличенная картинка */
-  #magnify {
+#magnify {
     display: none;
     position: fixed;
     max-width: 600px;
     margin: 0 auto;
     height: auto;
     z-index: 999999;
-  }
-  #magnify img {
+}
+
+#magnify img {
     width: 100%;
-  }
+}
+
   /* затемняющий фон */
-  #overlay {
+#overlay {
     display: none;
     background: #000;
     transition: all 0.3s ease 0s;
@@ -1039,9 +1037,9 @@ a:hover {
     width: 100vw;
     opacity: 0.5;
     z-index: 999990;
-  }
+}
   /* кнопка закрытия */
-  #close-popup {
+#close-popup {
     width: 30px;
     height: 30px;
     background: #FFFFFF;
@@ -1051,22 +1049,25 @@ a:hover {
     position: absolute;
     top: 15px;
     right: 15px;
-  }
-  #close-popup i {
+}
+
+#close-popup i {
     width: 30px;
     height: 30px;
     background: url(https://codernote.ru/files/cross.png) no-repeat center center;
     background-size: 16px 16px;
     display: block;
-  }
-  @keyframes rota {
+}
+
+@keyframes rota {
    25% { transform: rotate(360deg); }
-  }
-  #close-popup:hover {
+}
+
+#close-popup:hover {
     animation: rota 4s infinite normal;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-  }
+}
 
 @media(max-width: 646px) {
     .faq__block {
@@ -1088,6 +1089,10 @@ a:hover {
 .team-slider.slider__item {
     border: 1px solid #C4C4C4;
     padding: 0;
+}
+
+.team-slider > .slick__slide {
+    padding: 0 7rem !important;
 }
 
 .card-title {

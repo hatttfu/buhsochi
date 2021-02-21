@@ -118,7 +118,6 @@ $(document).ready(function(){
         adaptiveHeight: true,
 		speed: 500,
         centerMode: true,
-		// variableWidth: true,
 		responsive:[
             {
 				breakpoint: 992,
@@ -146,6 +145,12 @@ $(document).ready(function(){
 			},
 			{
 				breakpoint: 452,
+				settings: {
+					slidesToShow:1
+				}
+			},
+			{
+				breakpoint: 410,
 				settings: {
 					slidesToShow:1
 				}
