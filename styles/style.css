@@ -153,6 +153,12 @@ a:hover {
     }
 }
 
+@media(max-width: 386px) {
+    .header__block {
+        width: 62%;
+    }
+}
+
 .carousel-control-prev {
     left: -32px;
 }
@@ -620,7 +626,7 @@ a:hover {
 
 @media (max-width: 608px) {
     .stages .container-md {
-        padding: 5rem 0;
+        padding: 2rem 0;
     }
 }
 
@@ -944,9 +950,9 @@ a:hover {
     .slide__text {
         display: none;
     }
-    /* .partners {
-        height: 70vh;
-    } */
+    .partners {
+        height: auto;
+    }
 }
 
 .reviews, .team {
